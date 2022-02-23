@@ -10,7 +10,7 @@ Type* Parser::parseString(std::string str)
 	if (str.length() > 0)
 	{
 		Helper::rtrim(str);
-		if (getVariableValue(str) == nullptr)
+		//if (getVariableValue(str) == nullptr)
 		{
 			Type* var = getType(str);
 			if (var != nullptr)
@@ -94,7 +94,7 @@ bool Parser::makeAssignment(std::string str)
 		{
 			throw new SyntaxException();
 		}
-		_variables.insert({ name, type });
+
 		return true;
 	}
 	else
@@ -103,22 +103,22 @@ bool Parser::makeAssignment(std::string str)
 	}
 }
 
-Type* Parser::getVariableValue(std::string str)
-{
-	for (auto& it : _variables) 
-	{
-		if (it.first == str)
-		{
-			return it.second;
-		}
-	}
-	return nullptr;
-}
+//Type* Parser::getVariableValue(std::string str)
+//{
+//	for (auto& it : _variables) 
+//	{
+//		if (it.first == str)
+//		{
+//			return it.second;
+//		}
+//	}
+//	return nullptr;
+//}
 
-void Parser::deleteAllVariables()
-{
-	for (auto& it : _variables) 
-	{
-		delete it.second;
-	}
-}
+//void Parser::deleteAllVariables()
+//{
+//	for (auto& it : _variables) 
+//	{
+//		delete it.second;
+//	}
+//}

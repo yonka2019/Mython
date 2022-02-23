@@ -26,8 +26,8 @@ public:
 private:
     static bool isLegalVarName(std::string str);
     static bool makeAssignment(std::string str);
-    static std::unordered_map<std::string, Type*> _variables;
-    static Type* getVariableValue(std::string str);
-    static void deleteAllVariables();
+    //static std::unordered_map<std::string, Type*> _variables;
+    //static Type* getVariableValue(std::string str);
+    //static void deleteAllVariables();
 
 };
