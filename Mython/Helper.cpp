@@ -78,8 +78,6 @@ void Helper::removeLeadingZeros(std::string &str)
 }
 
 
-
-
 bool Helper::isLowerLetter(const char c)
 {
 	return (c >= 'a' && c <= 'z');

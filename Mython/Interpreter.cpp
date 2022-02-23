@@ -1,5 +1,5 @@
 #include "Type.h"
-#include "SyntaxException.h";
+#include "SyntaxException.h"
 #include "InterpreterException.h"
 #include "Parser.h"
 #include <iostream>
