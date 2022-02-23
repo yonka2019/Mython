@@ -139,20 +139,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Boolean.cpp" />
     <ClCompile Include="Helper.cpp" />
     <ClCompile Include="IndentationException.cpp" />
+    <ClCompile Include="Integer.cpp" />
     <ClCompile Include="Interpreter.cpp" />
     <ClCompile Include="Parser.cpp" />
+    <ClCompile Include="Sequence.cpp" />
+    <ClCompile Include="String.cpp" />
     <ClCompile Include="SyntaxException.cpp" />
     <ClCompile Include="Type.cpp" />
+    <ClCompile Include="Void.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Boolean.h" />
     <ClInclude Include="Helper.h" />
     <ClInclude Include="IndentationException.h" />
+    <ClInclude Include="Integer.h" />
     <ClInclude Include="InterpreterException.h" />
     <ClInclude Include="Parser.h" />
+    <ClInclude Include="Sequence.h" />
+    <ClInclude Include="String.h" />
     <ClInclude Include="SyntaxException.h" />
     <ClInclude Include="Type.h" />
+    <ClInclude Include="Void.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

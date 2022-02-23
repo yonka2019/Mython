@@ -1,4 +1,5 @@
 #include "Type.h"
+#include "SyntaxException.h";
 #include "InterpreterException.h"
 #include "Parser.h"
 #include <iostream>
@@ -12,6 +13,7 @@ int main(int argc,char **argv)
 	std::cout << WELCOME << YOUR_NAME << std::endl;
 
 	std::string input_string;
+	Type* var;
 
 	// get new command from user
 	std::cout << ">>> ";
@@ -22,7 +24,16 @@ int main(int argc,char **argv)
 		try
 		{
 			// parsing command
-			Parser::parseString(input_string);
+			var = Parser::parseString(input_string);
+			if (var == nullptr)
+			{
+				throw new SyntaxException();
+			}
+			if (var->isPrintable())
+			{
+				std::cout << var->toString() << std::endl;
+			}
+			delete var;
 		}
 		catch (const InterpreterException* err)
 		{
@@ -32,6 +43,7 @@ int main(int argc,char **argv)
 		// get new command from user
 		std::cout << ">>> ";
 		std::getline(std::cin, input_string);
+
 	}
 
 	return 0;
