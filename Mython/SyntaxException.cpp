@@ -3,5 +3,5 @@
 
 const char* SyntaxException::what() const noexcept
 {
-	return "SyntaxError: invalid synta";
+	return "SyntaxError: invalid syntax";
 }
